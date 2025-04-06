@@ -2,9 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-// #ifdef __cplusplus
-// extern "C" {
-// #endif
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 typedef struct Node {
 	void* item;
 	struct Node*  next;
@@ -53,7 +55,6 @@ int size(List* list_pointer);
 
 // Print List
 void printList(List* list_pointer);
-// #ifdef __cplusplus
-// }
-// #endif
-// #endif // LINKED_LIST_H
+#ifdef __cplusplus
+}
+#endif
