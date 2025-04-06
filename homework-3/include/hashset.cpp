@@ -1,7 +1,14 @@
+extern "C"{
+  #include "linkedlist.h"
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+// hashset struct 
 class HashSet {
   private:
     // The backbone of the hash set: an array of linked list pointers for handling collisions
-    LinkedList** array;
+    List** array;
 
     // The number of buckets in the array
     size_t bucket_count; 
@@ -9,7 +16,7 @@ class HashSet {
     // Total number of elements in the set
     size_t element_count;
 
-    // Load factor threshold for resizing (default 70)
+    // Load factor threshold
     unsigned int load_threshold;
 
     // The current load factor (average number of elements per bucket)
